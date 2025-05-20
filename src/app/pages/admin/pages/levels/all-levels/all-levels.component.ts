@@ -1,4 +1,4 @@
-import { Component, effect, inject } from '@angular/core';
+import { Component, effect, inject, signal } from '@angular/core';
 import { Store } from '@ngrx/store';
 import {
   deleteGradeLevel,
@@ -20,6 +20,8 @@ import { RouterLink } from '@angular/router';
 export class AllLevelsComponent {
   private store = inject(Store);
 
+  selectedId = signal(0);
+
   gradeLevels = this.store.selectSignal(selectAllGradeLevels);
   loading = this.store.selectSignal(selectGradeLevelLoading);
 
@@ -28,6 +30,7 @@ export class AllLevelsComponent {
   }
 
   deleteGradeLevel(id: number) {
+    this.selectedId.set(id);
     this.store.dispatch(deleteGradeLevel({ id: id }));
   }
 }

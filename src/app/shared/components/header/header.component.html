@@ -34,9 +34,9 @@
       <a
         routerLink="registration"
         routerLinkActive="underline underline-offset-4"
-        class="flex items-center"
+        class="flex items-center font-extrabold"
       >
-        <span class="hidden md:block">Registration</span>
+        <span class="hidden md:block">New Registration</span>
         <span class="flex items-center md:hidden">
           <ng-icon [svg]="registerIcon" size="24" />
         </span>
@@ -79,7 +79,7 @@
           class="flex cursor-pointer items-center gap-2"
           (click)="toggleAccountControls()"
         >
-          <span class="hidden md:block">{{ user()?.name | titlecase }}</span>
+          <span class="hidden md:block">{{ user()?.email }}</span>
           <ng-icon [svg]="accountIcon" size="24" />
         </button>
         <app-account-controls

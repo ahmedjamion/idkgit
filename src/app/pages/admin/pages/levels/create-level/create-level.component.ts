@@ -8,7 +8,7 @@ import {
 } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { createGradeLevel } from '../../../../../store/grade-level/grade-level.actions';
-import { GradeLevel } from '../../../../../core/models/grade-level.model';
+import { selectGradeLevelLoading } from '../../../../../store/grade-level/grade-level.selector';
 
 @Component({
   selector: 'app-create-level',
@@ -18,6 +18,8 @@ import { GradeLevel } from '../../../../../core/models/grade-level.model';
 })
 export class CreateLevelComponent {
   private store = inject(Store);
+
+  loading = this.store.selectSignal(selectGradeLevelLoading);
 
   levelForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
