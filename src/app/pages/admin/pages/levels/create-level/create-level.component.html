@@ -1,0 +1,40 @@
+<p class="text-xl">Create Grade Level</p>
+<form
+  [formGroup]="levelForm"
+  (ngSubmit)="onSubmit()"
+  class="flex flex-col gap-2"
+>
+  <label class="flex flex-col items-start">
+    Level Name
+    <input
+      type="text"
+      formControlName="name"
+      placeholder="e.g. Grade 1"
+      class="rounded-md border-1 border-black p-2 placeholder-black/50"
+    />
+  </label>
+  <label class="flex flex-col items-start">
+    Description
+    <input
+      type="text"
+      formControlName="description"
+      placeholder="e.g. Some description"
+      class="rounded-md border-1 border-black p-2 placeholder-black/50"
+    />
+  </label>
+  <label class="flex flex-col items-start">
+    Level Order
+    <input
+      type="number"
+      formControlName="level_order"
+      placeholder="e.g. 1"
+      class="rounded-md border-1 border-black p-2 placeholder-black/50"
+    />
+  </label>
+  <button
+    type="submit"
+    class="bg-primary self-start rounded-md p-2 px-4 text-white"
+  >
+    Create
+  </button>
+</form>

@@ -1,0 +1,30 @@
+@if (loading()) {
+  <p>Loading...</p>
+} @else {
+  @for (gradeLevel of gradeLevels(); track gradeLevel.id) {
+    <div
+      class="flex w-3xs flex-col gap-2 rounded-xl bg-white p-2 drop-shadow-md"
+    >
+      <p class="text-xl font-bold">{{ gradeLevel.name! }}</p>
+      <hr />
+      <p>{{ gradeLevel.description! }}</p>
+      <p>{{ gradeLevel.level_order! }}</p>
+      <div class="flex w-full gap-2">
+        <button
+          class="text-primary border-primary cursor-pointer rounded-md border-1 bg-white p-2 px-4"
+          (click)="deleteGradeLevel(gradeLevel.id)"
+          [disabled]="loading()"
+        >
+          Delete
+        </button>
+        <button
+          [routerLink]="['/admin/levels/edit-level', gradeLevel.id!]"
+          class="bg-primary flex-1 cursor-pointer rounded-md p-2 px-4 text-white"
+          [disabled]="loading()"
+        >
+          Edit
+        </button>
+      </div>
+    </div>
+  }
+}

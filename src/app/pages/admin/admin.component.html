@@ -5,7 +5,7 @@
   <div class="wave-decoration"></div>
 
   <!-- Sidebar navigation -->
-  <app-sidebar>
+  <app-sidebar class="min-h-full">
     <div class="sidebar-content">
       <app-sidebar-item
         [icon]="homeIcon"
@@ -61,7 +61,7 @@
   </app-sidebar>
 
   <div class="main-content">
-    <div class="white-container">
+    <div class="white-container min-scrollbar">
       <router-outlet />
     </div>
   </div>

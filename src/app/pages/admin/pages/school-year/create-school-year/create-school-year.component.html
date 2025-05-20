@@ -1,0 +1,34 @@
+<p class="text-xl">Create School Year</p>
+<form [formGroup]="schoolYearForm" class="flex flex-col gap-2">
+  <label class="flex flex-col items-start">
+    School Year
+    <input
+      type="text"
+      formControlName="name"
+      placeholder="e.g. 2025-2026"
+      class="rounded-md border-1 border-black p-2 placeholder-black/50"
+    />
+  </label>
+  <label class="flex flex-col items-start">
+    Start Date
+    <input
+      type="date"
+      formControlName="start_date"
+      class="rounded-md border-1 border-black p-2 placeholder-black/50"
+    />
+  </label>
+  <label class="flex flex-col items-start">
+    End Date
+    <input
+      type="date"
+      formControlName="end_date"
+      class="rounded-md border-1 border-black p-2 placeholder-black/50"
+    />
+  </label>
+  <button
+    type="submit"
+    class="bg-primary self-start rounded-md p-2 px-4 text-white"
+  >
+    Create
+  </button>
+</form>

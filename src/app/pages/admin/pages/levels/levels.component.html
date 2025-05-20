@@ -1,1 +1,16 @@
-<p>levels works!</p>
+<p class="text-2xl font-bold">Levels Management</p>
+<div class="flex gap-2">
+  <a
+    routerLink="all-levels"
+    routerLinkActive="underline underline-offset-4"
+    class="bg-primary w-24 rounded-md p-2 px-4 text-center text-white"
+    >All</a
+  >
+  <a
+    routerLink="create-level"
+    routerLinkActive="underline underline-offset-4"
+    class="bg-primary w-24 rounded-md p-2 px-4 text-center text-white"
+    >Create</a
+  >
+</div>
+<router-outlet />

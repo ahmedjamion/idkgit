@@ -1,7 +1,7 @@
 /* Parent layout container */
 .parent-container {
   display: flex;
-  min-height: 100vh;
+  min-height: calc(100dvh - 56px);
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -47,16 +47,16 @@
 /* Main content area */
 .main-content {
   flex: 1;
-  padding: 1.5rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  height: 100vh;
+  height: calc(100dvh - 56px);
   scroll-behavior: smooth;
 }
 
 /* White transparent container */
 .white-container {
+  height: 100%;
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 0.75rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -64,11 +64,18 @@
   padding: 1.5rem;
   margin: 0;
   flex: 1;
-  overflow: auto;
   width: 100%;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   transition: all 0.3s ease;
+}
+
+.sidebar-content {
+  max-height: calc(100dvh - 56px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 /* Custom scrollbar for main content */
@@ -91,14 +98,9 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .parent-container {
+  /* .parent-container {
     flex-direction: column;
-  }
-
-  .main-content {
-    padding: 1rem;
-    height: calc(100vh - 56px); /* Adjust for header height */
-  }
+  } */
 
   .white-container {
     padding: 1rem;

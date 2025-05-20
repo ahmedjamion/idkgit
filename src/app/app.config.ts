@@ -10,6 +10,8 @@ import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { authInterceptor } from './core/interceptors/auth.interceptor';
 import { sidebarReducer } from './store/sidebar/sidebar.reducer';
 import { accountControlsReducer } from './shared/components/account-controls/store/account-controls.reducer';
+import { gradeLevelReducer } from './store/grade-level/grade-level.reducer';
+import { GradeLevelEffects } from './store/grade-level/grade-level.effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -20,7 +22,8 @@ export const appConfig: ApplicationConfig = {
       auth: authReducer,
       sidebar: sidebarReducer,
       accountControls: accountControlsReducer,
+      gradeLevel: gradeLevelReducer,
     }),
-    provideEffects([AuthEffects]),
+    provideEffects([AuthEffects, GradeLevelEffects]),
   ],
 };

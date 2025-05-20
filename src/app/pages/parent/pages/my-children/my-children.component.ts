@@ -7,6 +7,7 @@ import {
   matHealthAndSafetyRound,
   matEventNoteRound,
   matSchoolRound,
+  matTimelineRound,
 } from '@ng-icons/material-icons/round';
 
 interface Child {
@@ -39,6 +40,7 @@ export class MyChildrenComponent implements OnInit {
   healthIcon = matHealthAndSafetyRound;
   attendanceIcon = matEventNoteRound;
   schoolIcon = matSchoolRound;
+  progressIcon = matTimelineRound;
 
   // Mock children data
   children: Child[] = [

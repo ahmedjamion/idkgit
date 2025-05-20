@@ -77,6 +77,27 @@ import {
         <div class="report-card">
           <div class="report-icon">
             <ng-icon
+              [svg]="reportIcon"
+              size="32"
+              class="text-purple-600"
+            ></ng-icon>
+          </div>
+          <div class="report-info">
+            <h3 class="report-title">School Form 5 (SF5)</h3>
+            <p class="report-desc">
+              Report on Promotion and Learning Progress Achievement
+            </p>
+            <p class="mb-4 text-sm text-gray-500">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam,
+              nemo.
+            </p>
+            <button class="generate-btn">Generate SF5</button>
+          </div>
+        </div>
+
+        <div class="report-card">
+          <div class="report-icon">
+            <ng-icon
               [svg]="healthIcon"
               size="32"
               class="text-red-600"
@@ -89,6 +110,44 @@ import {
               Health assessment and nutritional status of students
             </p>
             <button class="generate-btn">Generate SF8</button>
+          </div>
+        </div>
+
+        <div class="report-card">
+          <div class="report-icon">
+            <ng-icon
+              [svg]="reportIcon"
+              size="32"
+              class="text-purple-600"
+            ></ng-icon>
+          </div>
+          <div class="report-info">
+            <h3 class="report-title">School Form 9 (SF9)</h3>
+            <p class="report-desc">School Report Card</p>
+            <p class="mb-4 text-sm text-gray-500">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam,
+              nemo.
+            </p>
+            <button class="generate-btn">Generate SF9</button>
+          </div>
+        </div>
+
+        <div class="report-card">
+          <div class="report-icon">
+            <ng-icon
+              [svg]="reportIcon"
+              size="32"
+              class="text-purple-600"
+            ></ng-icon>
+          </div>
+          <div class="report-info">
+            <h3 class="report-title">School Form 10 (SF10)</h3>
+            <p class="report-desc">Learners' Permanent Record</p>
+            <p class="mb-4 text-sm text-gray-500">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam,
+              nemo.
+            </p>
+            <button class="generate-btn">Generate SF10</button>
           </div>
         </div>
       </div>

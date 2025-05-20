@@ -10,6 +10,7 @@ import {
   matSortRound,
   matAddRound,
 } from '@ng-icons/material-icons/round';
+import { RouterLink } from '@angular/router';
 
 // Mock interface for registration data
 interface Registration {
@@ -25,7 +26,7 @@ interface Registration {
 @Component({
   selector: 'app-registrations',
   standalone: true,
-  imports: [CommonModule, NgIcon],
+  imports: [CommonModule, NgIcon, RouterLink],
   templateUrl: './registrations.component.html',
   styleUrl: './registrations.component.css',
 })

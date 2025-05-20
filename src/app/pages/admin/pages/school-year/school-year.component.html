@@ -1,1 +1,22 @@
-<p>school-year works!</p>
+<p class="text-2xl font-bold">School Years Management</p>
+<div class="flex gap-2">
+  <a
+    routerLink="active"
+    routerLinkActive="underline underline-offset-4"
+    class="bg-primary w-24 rounded-md p-2 px-4 text-center text-white"
+    >Active</a
+  >
+  <a
+    routerLink="all"
+    routerLinkActive="underline underline-offset-4"
+    class="bg-primary w-24 rounded-md p-2 px-4 text-center text-white"
+    >All</a
+  >
+  <a
+    routerLink="create"
+    routerLinkActive="underline underline-offset-4"
+    class="bg-primary w-24 rounded-md p-2 px-4 text-center text-white"
+    >Create</a
+  >
+</div>
+<router-outlet />

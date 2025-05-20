@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -12,8 +12,6 @@ import {
   selectAuthLoading,
 } from '../../../../store/auth/auth.selector';
 import { CommonModule } from '@angular/common';
-import { InputComponent } from '../../../../shared/components/input/input.component';
-import { ButtonComponent } from '../../../../shared/components/button/button.component';
 
 @Component({
   selector: 'app-login-form',

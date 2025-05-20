@@ -43,12 +43,18 @@ export const adminRoutes: Routes = [
       import('./pages/levels/levels.component').then(
         (component) => component.LevelsComponent,
       ),
+    loadChildren: () =>
+      import('./pages/levels/levels.routes').then((route) => route.levelRoutes),
   },
   {
     path: 'school-year',
     loadComponent: () =>
       import('./pages/school-year/school-year.component').then(
         (component) => component.SchoolYearComponent,
+      ),
+    loadChildren: () =>
+      import('./pages/school-year/school-year.routes').then(
+        (route) => route.schoolYearRoutes,
       ),
   },
   {
